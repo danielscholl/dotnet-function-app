@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  dotnet-function-app:
+    image: ${REGISTRY_SERVER}/dotnet-function-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    restart: always
